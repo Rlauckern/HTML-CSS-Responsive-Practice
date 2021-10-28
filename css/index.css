@@ -1,4 +1,3 @@
-
 /*CSS Reset*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -35,8 +34,10 @@ footer, header, hgroup, menu, nav, section {
     padding:0;
     margin:0;
     max-width:100%;
-    border:1px solid grey; 
+    /* border:1px solid grey;  */
 }
+
+/*General Styles*/
 html{
     font-size:62.5%;
 }
@@ -44,45 +45,56 @@ body{
     font-size:1.8rem;
     line-height:1.5;
     color:#4f4f4f;
-    background-color: #fbfffb;
+    background-color:#FBFFFB;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 h1{
+    color:#FBFFFB;
     font-size:6rem;
-    color:#fbfffb;
+    font-family: 'Oxygen', sans-serif;
+}
+h2{
+    font-size:3rem;
+}
+h3{
+    font-size:2.2rem;
 }
 h2, h3{
-    color: #266035;
+    color:#266035;
+    text-align:center;
+    font-family: 'Oxygen', sans-serif;
+    margin-bottom:5%;
 }
 a{
     text-decoration: none;
     color:#266035;
     font-family: 'Source Sans Pro', sans-serif;
-
 }
 button{
     font-family: 'Source Sans Pro', sans-serif;
     font-size:1.8rem;
-    padding: 2% 4%;
-    margin-top: 4%;
-
+    padding:2% 4%;
+    margin-top:4%;
 }
-
 section, footer{
     padding:4% 0;
 }
-bg-img{
+/*helper classes*/
+.bg-img{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
-nav{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    top:0;
-    z-index: 999;
-    backgrund-color:rgba(255, 255, 255, 0.8);
 
+/*header section styles*/
+nav{
+    display:flex;
+    justify-content: space-between;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index: 999; /*everything should scroll behind this*/
+    background-color:rgba(255, 255, 255, 0.8);
 }
 .logo{
     width:5%;
@@ -93,95 +105,116 @@ nav{
     justify-content: space-evenly;
     align-items: center;
 }
+
+/*top section styles*/
 #top{
     height:90vh;
     background-image: url('../images/header.jpg');
     background-position: bottom;
+    display:flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align:center;
 }
 #top button{
-    border: 5 px solid #266035;
-    color: #266035;
-    background: #fff;
-    transition: 2s;
+    border:2px solid #266035;
+    color:#266035;
+    background-color:#fff;
+    transition:2s;
 }
 #top button:hover{
     color:#fff;
-    background-color: #266035;
+    background-color:#266035;
     border:2px solid #fff;
 }
+
+/*About Section Styles*/ 
 #about{
-    height:60vh;
+    height:85vh;
     background-image:url('../images/about-img.jpg');
-    display: flex;
+    display:flex;
     justify-content: flex-end;
     align-items: center;
 }
-#abouut div{
-    width:30%;
-    margin-right: 10%;
+#about div{
+    width:20%;
+    margin-right:10%;
+}
+
+/*Shop Section Styles*/
+#shop{
+    padding-bottom:0;
 }
 .container{
-    display: flex;
-    flex-wrap: wrap;
+    display:flex;
+    flex-wrap:wrap;
 }
-.cacti, .tropicals, .succelents, .text{
+
+.cacti, .tropicals, .succulants, .text{
     width:50%;
 }
 .text{
-    padding: 5%;
-    display: flex;
+    padding:5%;
+    display:flex;
     justify-content: center;
-    text-align: center;
+    text-align:center;
 }
 .text div{
-    width: 60%;
+    width:60%;
 }
 .text button{
-    background-color: #266035;
+    background-color:#266035;
     color:#fff;
-    border:2px, solid #266035;
+    border:2px solid #266035;
     transition:2s;
 }
 .text button:hover{
-    background-color: #fff;
+    background-color:#fff;
     color:#266035;
 }
-.succelents{
-    background-image: url(../images/succulants.jpg);
+.succulants{
+    background-image:url('../images/succulants.jpg');
 }
 .cacti{
-    background-image: url(../images/succulants.jpg);
+    background-image:url('../images/cacti.jpg');
 }
 .tropicals{
-    background-image: url(../images/tropicals.jpg);
+    background-image:url('../images/tropicals.jpg');
 }
-footer{
-    background-color: #266035;
-    display: flex;
-    flex-wrap: wrap;
-    color:#fff;
 
+/*footer section styles*/
+footer{
+    background-color:#266035;
+    display:flex;
+    flex-wrap:wrap;
+    color:#fff;
 }
 footer h2{
     color:#fff;
-    width:100%
+    width:100%;
 }
 footer a, footer h3{
     color:#fff;
+    text-align:left;
 }
 .right, .left{
     width:50%;
-    display: flex;
+    display:flex;
     justify-content: center;
     align-items: center;
+}
+.left div.info{
+    width:60%;
+    line-height:2.5;
 }
 .right img{
     width:60%;
 }
+.bottom{
+    width:100%;
+    text-align:right;
+}
 .bottom p{
-    margin-right: 5%;
-    margin-top: 2%;
+    margin-right:5%;
+    margin-top:2%;
 }
